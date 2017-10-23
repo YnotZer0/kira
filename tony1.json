@@ -1,0 +1,341 @@
+{
+    "name": "tony test",
+    "created": "2017-08-18T16:23:19.380Z",
+    "intents": [
+        {
+            "intent": "Confirmation",
+            "created": "2017-08-18T17:15:16.281Z",
+            "updated": "2017-08-18T17:15:16.281Z",
+            "examples": [
+                {
+                    "text": "gp for it",
+                    "created": "2017-08-18T17:15:16.281Z",
+                    "updated": "2017-08-18T17:15:16.281Z"
+                },
+                {
+                    "text": "please do that",
+                    "created": "2017-08-18T17:15:16.281Z",
+                    "updated": "2017-08-18T17:15:16.281Z"
+                },
+                {
+                    "text": "of course that would be perfect",
+                    "created": "2017-08-18T17:15:16.281Z",
+                    "updated": "2017-08-18T17:15:16.281Z"
+                },
+                {
+                    "text": "yes please",
+                    "created": "2017-08-18T17:15:16.281Z",
+                    "updated": "2017-08-18T17:15:16.281Z"
+                },
+                {
+                    "text": "yeah",
+                    "created": "2017-08-18T17:15:16.281Z",
+                    "updated": "2017-08-18T17:15:16.281Z"
+                },
+                {
+                    "text": "yes",
+                    "created": "2017-08-18T17:15:16.281Z",
+                    "updated": "2017-08-18T17:15:16.281Z"
+                }
+            ],
+            "description": null
+        }
+    ],
+    "updated": "2017-08-18T17:15:16.281Z",
+    "entities": [
+        {
+            "entity": "Colour",
+            "values": [
+                {
+                    "value": "Red",
+                    "created": "2017-08-18T17:15:16.281Z",
+                    "updated": "2017-08-18T17:15:16.281Z",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "value": "Black",
+                    "created": "2017-08-18T17:15:16.281Z",
+                    "updated": "2017-08-18T17:15:16.281Z",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "value": "Silver",
+                    "created": "2017-08-18T17:15:16.281Z",
+                    "updated": "2017-08-18T17:15:16.281Z",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "value": "Gold",
+                    "created": "2017-08-18T17:15:16.281Z",
+                    "updated": "2017-08-18T17:15:16.281Z",
+                    "metadata": null,
+                    "synonyms": []
+                }
+            ],
+            "created": "2017-08-18T17:15:16.281Z",
+            "updated": "2017-08-18T17:15:16.281Z",
+            "metadata": null,
+            "description": null
+        }
+    ],
+    "language": "en",
+    "metadata": {
+        "api_version": {
+            "major_version": "v1",
+            "minor_version": "2017-04-21"
+        }
+    },
+    "description": "testing to perform export from dev and import into test",
+    "dialog_nodes": [
+        {
+            "go_to": null,
+            "title": null,
+            "output": {},
+            "parent": "node_2_1501688557740",
+            "context": null,
+            "created": "2017-08-18T17:15:16.281Z",
+            "updated": "2017-08-18T17:15:16.281Z",
+            "metadata": null,
+            "conditions": "true",
+            "description": null,
+            "dialog_node": "node_11_1501688951729",
+            "previous_sibling": null
+        },
+        {
+            "go_to": null,
+            "title": null,
+            "output": {
+                "text": ""
+            },
+            "parent": null,
+            "context": null,
+            "created": "2017-08-18T17:15:16.281Z",
+            "updated": "2017-08-18T17:15:16.281Z",
+            "metadata": null,
+            "conditions": null,
+            "description": null,
+            "dialog_node": "node_6_1501688811660",
+            "previous_sibling": "node_5_1501688777529"
+        },
+        {
+            "go_to": null,
+            "title": null,
+            "output": {
+                "text": {
+                    "values": [
+                        "Are you all done?"
+                    ],
+                    "selection_policy": "sequential"
+                }
+            },
+            "parent": null,
+            "context": null,
+            "created": "2017-08-18T17:15:16.281Z",
+            "updated": "2017-08-18T17:15:16.281Z",
+            "metadata": null,
+            "conditions": "$wva.intents.get(0).intent.equals('Help-Ending')",
+            "description": null,
+            "dialog_node": "node_2_1501688557740",
+            "previous_sibling": "node_1_1502206527936"
+        },
+        {
+            "go_to": null,
+            "title": null,
+            "output": {
+                "text": {
+                    "values": [
+                        "Goodbye"
+                    ],
+                    "selection_policy": "sequential"
+                }
+            },
+            "parent": "node_2_1501688557740",
+            "context": null,
+            "created": "2017-08-18T17:15:16.281Z",
+            "updated": "2017-08-18T17:15:16.281Z",
+            "metadata": null,
+            "conditions": "#Confirmation",
+            "description": null,
+            "dialog_node": "node_4_1501688581119",
+            "previous_sibling": "node_11_1501688951729"
+        },
+        {
+            "go_to": null,
+            "title": null,
+            "output": {
+                "text": {
+                    "values": [
+                        "Great will do"
+                    ],
+                    "selection_policy": "sequential"
+                }
+            },
+            "parent": "node_3_1501665293102",
+            "context": null,
+            "created": "2017-08-18T17:15:16.281Z",
+            "updated": "2017-08-18T17:15:16.281Z",
+            "metadata": null,
+            "conditions": "#Confirmation",
+            "description": null,
+            "dialog_node": "node_1_1501686885178",
+            "previous_sibling": null
+        },
+        {
+            "go_to": null,
+            "title": null,
+            "output": {
+                "text": {
+                    "values": [
+                        "Great you want to add a bar"
+                    ],
+                    "selection_policy": "sequential"
+                }
+            },
+            "parent": null,
+            "context": null,
+            "created": "2017-08-18T17:15:16.281Z",
+            "updated": "2017-08-18T17:15:16.281Z",
+            "metadata": null,
+            "conditions": "$wva.intents.get(0).intent.equals('Service_Management-Add_Service_Features')",
+            "description": null,
+            "dialog_node": "node_3_1501665293102",
+            "previous_sibling": null
+        },
+        {
+            "go_to": null,
+            "title": null,
+            "output": {
+                "text": {
+                    "values": [
+                        "More than one"
+                    ],
+                    "selection_policy": "sequential"
+                }
+            },
+            "parent": null,
+            "context": null,
+            "created": "2017-08-18T17:15:16.281Z",
+            "updated": "2017-08-18T17:15:16.281Z",
+            "metadata": null,
+            "conditions": "entities.size()>1",
+            "description": null,
+            "dialog_node": "node_2_1502206543267",
+            "previous_sibling": "node_3_1501665293102"
+        },
+        {
+            "go_to": null,
+            "title": null,
+            "output": {
+                "text": {
+                    "values": [
+                        "Okay I've changed that for you"
+                    ],
+                    "selection_policy": "sequential"
+                }
+            },
+            "parent": "node_5_1501688777529",
+            "context": null,
+            "created": "2017-08-18T17:15:16.281Z",
+            "updated": "2017-08-18T17:15:16.281Z",
+            "metadata": null,
+            "conditions": "#Confirmation",
+            "description": null,
+            "dialog_node": "node_7_1501688815553",
+            "previous_sibling": null
+        },
+        {
+            "go_to": null,
+            "title": null,
+            "output": {
+                "text": {
+                    "values": [
+                        "One colour"
+                    ],
+                    "selection_policy": "sequential"
+                }
+            },
+            "parent": null,
+            "context": null,
+            "created": "2017-08-18T17:15:16.281Z",
+            "updated": "2017-08-18T17:15:16.281Z",
+            "metadata": null,
+            "conditions": "@Colour",
+            "description": null,
+            "dialog_node": "node_1_1502206527936",
+            "previous_sibling": "node_2_1502206543267"
+        },
+        {
+            "go_to": null,
+            "title": null,
+            "output": {
+                "text": {
+                    "values": [
+                        "You want to change your name?"
+                    ],
+                    "selection_policy": "sequential"
+                }
+            },
+            "parent": null,
+            "context": null,
+            "created": "2017-08-18T17:15:16.281Z",
+            "updated": "2017-08-18T17:15:16.281Z",
+            "metadata": null,
+            "conditions": "$wva.intents.get(0).intent.equals('Account_Management-Name_Change')",
+            "description": null,
+            "dialog_node": "node_5_1501688777529",
+            "previous_sibling": "node_2_1501688557740"
+        },
+        {
+            "go_to": null,
+            "title": null,
+            "output": {
+                "text": {
+                    "values": [
+                        "I didn't understand. You can try rephrasing.",
+                        "Can you reword your statement? I'm not understanding.",
+                        "I didn't get your meaning."
+                    ],
+                    "selection_policy": "sequential"
+                }
+            },
+            "parent": null,
+            "context": null,
+            "created": "2017-08-18T17:15:16.281Z",
+            "updated": "2017-08-18T17:15:16.281Z",
+            "metadata": null,
+            "conditions": "anything_else",
+            "description": null,
+            "dialog_node": "Anything else",
+            "previous_sibling": "node_6_1501688811660"
+        },
+        {
+            "type": "response_condition",
+            "go_to": null,
+            "title": null,
+            "output": {
+                "text": {
+                    "values": [
+                        "true done"
+                    ],
+                    "selection_policy": "sequential"
+                }
+            },
+            "parent": "node_11_1501688951729",
+            "context": null,
+            "created": "2017-08-18T17:15:16.281Z",
+            "updated": "2017-08-18T17:15:16.281Z",
+            "metadata": null,
+            "conditions": "",
+            "description": null,
+            "dialog_node": "node_13_1501688974288",
+            "previous_sibling": null
+        }
+    ],
+    "workspace_id": "18b78881-b8eb-4780-8be9-ae71c8c2b7c9",
+    "counterexamples": [],
+    "learning_opt_out": false,
+    "status": "Available"
+}
